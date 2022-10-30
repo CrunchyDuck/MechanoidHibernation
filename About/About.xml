@@ -18,7 +18,9 @@ Compatible with newly added mech types.
 [b]Links:[/b]
 Discord with me and a whole 6 other people right now: https://discord.gg/hUnEs9ZhwA
 Github: https://github.com/CrunchyDuck/MechanoidHibernation
-donate: https://ko-fi.com/crunchyduck</description>
+donate: https://ko-fi.com/crunchyduck
+
+[img]https://raw.githubusercontent.com/CrunchyDuck/MechanoidHibernation/master/About/licence_image.png[/img]</description>
 	<modDependencies>
 		<li>
 			<packageId>brrainz.harmony</packageId>

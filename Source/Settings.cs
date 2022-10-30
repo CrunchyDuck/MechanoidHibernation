@@ -23,14 +23,14 @@ namespace CrunchyDuck.MechanoidHibernation {
         public override void DoSettingsWindowContents(UnityEngine.Rect inRect) {
             Listing_Standard listingStandard = new Listing_Standard();
             listingStandard.Begin(inRect);
-            listingStandard.Label("Hibernation Bandwidth multiplier: " + Settings.hibernationUsage);
+            listingStandard.Label("CD_MH_Setting_HibernationTooltip".Translate() + " " + Settings.hibernationUsage);
             Settings.hibernationUsage = listingStandard.Slider(Settings.hibernationUsage, 0f, 1f);
             listingStandard.End();
             base.DoSettingsWindowContents(inRect);
         }
 
         public override string SettingsCategory() {
-            return "Mechanoid Hibernation";
+            return "CD_MH_ModName".Translate();
         }
     }
 }

@@ -23,7 +23,7 @@ namespace CrunchyDuck.MechanoidHibernation {
 				// Inform the player they cannot do this :)
 				else if (lastWorkMode != work_mode) {
 					lastWorkMode = work_mode;
-					var s = "{0} does not have enough bandwidth to wake {1} up from hibernation.".Formatted(owner.Pawn.LabelShort, pawn.LabelShort);
+					var s = "CD_MH_NotEnoughBandwidth".Translate(owner.Pawn.LabelShort, pawn.LabelShort);
 					Messages.Message(s, pawn, MessageTypeDefOf.NegativeEvent);
 					
 				}
