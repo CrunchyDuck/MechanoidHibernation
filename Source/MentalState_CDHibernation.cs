@@ -12,6 +12,14 @@ namespace CrunchyDuck.MechanoidHibernation {
 
 		public override void MentalStateTick() {
 			base.MentalStateTick();
+			if (owner == null) {
+				GetData();
+				if (owner == null) {
+					Log.Error("Could not find hibernating mechanoid's owner. Removing from hibernation.");
+					RecoverFromState();
+				}
+			}
+
 			// Trying to take mech out of hibernation.
 			var work_mode = pawn.GetMechWorkMode();
 			if (work_mode != MechWorkModeDefOf.SelfShutdown) {
@@ -32,7 +40,10 @@ namespace CrunchyDuck.MechanoidHibernation {
 
 		public override void PreStart() {
 			base.PreStart();
-			// Get robot owner.
+			GetData();
+		}
+
+		public void GetData() {
 			owner = pawn.relations?.GetFirstDirectRelationPawn(PawnRelationDefOf.Overseer).mechanitor;
 			myPowerDraw = pawn.GetStatValue(StatDefOf.BandwidthCost);
 			lastWorkMode = owner.GetControlGroup(pawn).WorkMode;
