@@ -15,6 +15,7 @@ namespace CrunchyDuck.MechanoidHibernation {
     }
 
     public class ModMenuThing : Mod {
+        int i = 0;
         public ModMenuThing(ModContentPack content) : base(content) {
             GetSettings<Settings>();
         }
@@ -23,8 +24,7 @@ namespace CrunchyDuck.MechanoidHibernation {
         public override void DoSettingsWindowContents(UnityEngine.Rect inRect) {
             Listing_Standard listingStandard = new Listing_Standard();
             listingStandard.Begin(inRect);
-            listingStandard.Label("CD_MH_Setting_HibernationTooltip".Translate() + " " + Settings.hibernationUsage);
-            Settings.hibernationUsage = listingStandard.Slider(Settings.hibernationUsage, 0f, 1f);
+            listingStandard.SliderLabeled("CD_MH_Setting_HibernationTooltip".Translate(), ref Settings.hibernationUsage, 0, 1, 0.01f, 100, valueSuffix: "%");
             listingStandard.End();
             base.DoSettingsWindowContents(inRect);
         }
