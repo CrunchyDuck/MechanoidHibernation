@@ -60,6 +60,7 @@
     <Compile Include="ListingExtensions.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="MentalState_CDHibernation.cs" />
+    <Compile Include="Patch_GetStatDef.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Patch_Mechanitor_UsedBandwidthFromSubjects.cs" />
     <Compile Include="Patch_MechanitorBandwidthGizmo_GizmoOnGUI.cs" />

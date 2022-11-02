@@ -1,6 +1,8 @@
 ﻿using RimWorld;
 using Verse.AI;
 using Verse;
+using System.Reflection;
+using HarmonyLib;
 
 namespace CrunchyDuck.MechanoidHibernation {
 	class MentalState_Hibernation : MentalState {

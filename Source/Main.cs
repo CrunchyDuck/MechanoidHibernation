@@ -20,6 +20,7 @@ namespace CrunchyDuck.MechanoidHibernation {
 			AddPatch(harmony, typeof(Patch_Mechanitor_UsedBandwidthFromSubjects));
 			AddPatch(harmony, typeof(Patch_SelfShutdown));
 			AddPatch(harmony, typeof(Patch_MechanitorBandwidthGizmo_GizmoOnGUI));
+			AddPatch(harmony, typeof(Patch_GetStatDef));
 		}
 
 		private static void AddPatch(Harmony harmony, Type type) {
